@@ -1,0 +1,69 @@
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  background: #fafafb;
+  margin: 0;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li {
+  float: left;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li:nth-child(1) {
+  border: none;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li.is-active a {
+  background: #029cce;
+  color: #fff;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li a {
+  float: left;
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #7C7C7C;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li a:hover {
+  background: #029cce;
+  color: #fff;
+}
+
+.woocommerce-MyAccount-content .woocommerce-orders-table tbody .woocommerce-orders-table__cell a {
+  color: #029cce;
+}
+
+.woocommerce-MyAccount-content p a {
+  color: #029cce;
+}
+
+.woocommerce-account .addresses .title .edit {
+  float: left;
+  clear: left;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #029cce;
+}
+
+.woocommerce-account .addresses .title h3 {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.woocommerce-Address-title {
+  margin-bottom: 45px;
+}
+
+.woocommerce button.button:hover {
+  border: 1px solid #029cce;
+}
+
+.woocommerce-EditAccountForm fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}

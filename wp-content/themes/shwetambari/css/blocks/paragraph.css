@@ -1,0 +1,22 @@
+.paragraph__text h2 {
+  font-size: 36px;
+  color: #808080;
+  margin-bottom: 30px;
+}
+.paragraph__text h3 {
+  font-size: 30px;
+  color: #808080;
+  margin-bottom: 15px;
+}
+.paragraph__text h4 {
+  font-size: 25px;
+  color: #808080;
+}
+.paragraph__text p {
+  margin-bottom: 30px;
+  color: #808080;
+}
+.paragraph__text li {
+  color: #808080;
+  list-style-position: inside;
+}

@@ -1,0 +1,42 @@
+.text_block {
+    padding: 60px 0;
+    text-align: center;
+
+    &__text {
+        p,h2,h3 {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2.4px;
+            line-height: 2;
+
+            @include responsive('mobile-h') {
+                font-size: 16px;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+        }
+        
+    }
+}
+
+.home__hero + .text_block {
+    padding-top: 150px;
+
+    @include responsive('tablet-v') {
+        padding-top: 110px;
+    }
+
+    @include responsive('mobile-h') {
+        padding-bottom: 0;
+    }
+}
+
+.text_block + .banners {
+    padding-top: 50px;
+}
+
+.banners + .text_block {
+    padding-top: 0px;
+}

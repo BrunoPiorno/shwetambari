@@ -1,0 +1,1 @@
+<?php get_template_part('modules/'.get_row_layout());  ?>

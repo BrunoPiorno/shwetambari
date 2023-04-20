@@ -1,0 +1,201 @@
+.home-grid{
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+      display: grid;
+      /*grid-template-columns: repeat(2, 1fr);*/
+      grid-template-columns:repeat(2,minmax(calc(0rem + 50vw + 0vh),1fr));
+      grid-auto-flow: dense;
+      /*
+      @supports (grid-template-rows: masonry) {
+            grid-template-rows: masonry;
+      }
+      */
+      @include responsive('mobile-h') {
+            grid-template-columns: repeat(1, 1fr);
+      }
+      .home__hero{
+            position: relative;
+            grid-column: 1 / 3;
+            @include responsive('mobile-h') {
+                  grid-column: 1 / 2;
+            }
+      }
+      &__item{
+            position: relative;
+            &.full{
+                  grid-column: 1 / 3;
+                  @include responsive('mobile-h') {
+                        grid-column: 1 / 2;
+                  }
+                  .text-block{
+                        padding: 60px 30px;
+                  }
+                  .home-grid__item--video{
+                        @include row();
+                        position: relative;
+                        padding-top: 46%;
+                        @include responsive('mobile-v') {
+                              padding-top: 67%;
+                              height: auto;
+                        }
+                        video {
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              float:left;
+                              object-fit: cover;
+                              object-position: center;
+                              width: calc(100% + 6px);
+                              height: 100%;
+                        }
+                        .image_placeholder {
+                              height: 100%;
+                        }
+                  }
+            }
+            &--image{
+                  display: block;
+                  position: relative;
+                  overflow: hidden;
+                  img{
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        object-fit: cover;
+                  }
+            }
+            &--video{
+                  position: relative;
+                  height: auto;
+                  video {
+                        position: relative;
+                        /*
+                        top: 0;
+                        left: 0;
+                        float:left;
+                        */
+                        object-fit: cover;
+                        object-position: center;
+                        width: 100%;
+                        height: auto;
+                  }
+                  
+                  .image_placeholder {
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+
+                        img {
+                              @include row();
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              height: 100%;
+                              object-fit: cover;
+                        }
+                  }
+                  .controls {
+                        display: none;
+                        .video-controls {
+                              position: absolute;
+                              top:30px;
+                              right:30px;
+                              color:#fff;
+                              font-size: 12px; 
+                              text-transform: uppercase; 
+                              font-weight: 700; 
+                              padding: 5px 10px 4px; 
+                              cursor: pointer;
+                              background: $red;
+                              @include responsive('small') {
+                                    font-size: 10px;
+                                    font-weight: 600;
+                                    bottom: 15px;
+                                    right: 15px;
+                              }
+                              &:hover {
+                                    background: #000;
+                              }
+                              &.pause {
+                                    height: 50px;
+                                    width: 50px;
+                                    border-radius: 50%;
+                                    background-color:rgba(0,0,0,.1);
+                                    background-image: url(images/pause-solid.svg);
+                                    @include cover();
+                                    background-size: 60%;
+                                    font-size: 0;
+                                    z-index: 2;
+                                    &:hover {
+                                          background-color:rgba(0,0,0,.1);
+                                    }
+                                    @include responsive('tablet-small') {
+                                          height: 50px;
+                                          width: 50px;
+                                    }
+                                    @include responsive('small') {
+                                          height: 35px;
+                                          width: 35px;
+                                    }
+                              }
+                        }
+                  }
+                 .play-button {
+                        cursor: pointer;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateY(-50%) translateX(-50%);
+                        z-index: 2;
+                        @include responsive('mobile-v') {
+                              width: 60px;
+                              height: 60px;
+                        }
+                        @include responsive('small') {
+                              top: 35%;
+                              transform: translateX(-50%) scale(.5) translateY(-50%);
+                        }
+                        &:hover {
+                              .stroke-solid {
+                                    opacity: 1;
+                                    stroke-dashoffset: 300;
+                              }
+                        }
+                  }
+
+            }
+            .text-block{
+                  text-align: left;
+            }
+            .product-overlay{
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  z-index: 1;
+                  width: 100%;
+                  height: auto;
+                  padding: 40px 25px 30px;
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: flex-end;
+                  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+                  &__text{
+                        text-transform: uppercase;
+                        letter-spacing: 2.4px;
+                        width: 50%;
+                        font-size: 14px;
+                        color: $white;
+                        line-height: 1.2;
+                        &.black{
+                              color: $black;
+                        }
+                  }
+            }
+      }
+
+}

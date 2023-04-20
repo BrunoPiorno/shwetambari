@@ -1,0 +1,95 @@
+.banners {
+  padding: 158px 0 110px 0;
+
+  @include responsive('mobile-v') {
+    padding: 158px 0 70px 0;
+  }
+
+  .container {
+    @extend .container-small;
+
+    @include responsive('mobile-v') {
+      padding: 0;
+    }
+  }
+
+  &__list {
+    @include row();
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+
+  
+
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      z-index: 2;
+      text-indent: 5000px;
+      overflow: hidden;
+      width: 60px;
+      height: 56px;
+      transform: translate(0, -50%);
+
+      background-image: url("images/slick-arrow.svg"); 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; 
+      background-color: transparent;
+
+      &.slick-prev {
+        background-image: url("images/slick-arrow-left.svg"); 
+      }
+
+      &.slick-next {
+        right: 20px;
+        left: auto;
+      }
+    }
+  }
+
+  &__item {
+    @include row();
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: translate3d(0,-20px,0);
+    }
+
+    &__image {
+      @include row();
+      position: relative;
+      padding-top: 163%;
+    }
+
+    &__title {
+      @include row();
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2.4px;
+      text-align: center;
+      margin-top: 40px;
+
+      @include responsive('mobile-v') {
+        margin-top: 46px;
+      }
+    }
+
+    .button-responsive {
+      display: none; 
+
+      /*@include responsive('mobile-v') {
+        display: block;
+        color: $black;
+        font-size: 17px;
+        line-height: 1.74;
+        letter-spacing: 3.4px;
+        @include row();
+        text-align: center;
+        text-decoration: underline;
+        font-weight: 500;
+      }*/
+    }
+  }
+}

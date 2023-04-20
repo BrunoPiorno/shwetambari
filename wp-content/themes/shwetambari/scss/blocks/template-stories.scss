@@ -1,0 +1,202 @@
+.stories-page {
+    padding-top: 70px;
+    width: 1078px;
+    max-width: 100%;
+    float: none;
+    margin: 0 auto;
+   
+    &__story_text {
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        line-height: 2;
+        text-align: center;
+        width: 882px;
+        margin: 0 auto;
+        max-width: 100%;
+
+        @include responsive('mobile-h') {
+            font-size: 16px;
+        }
+    }
+
+    &__cont--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 75px 90px;
+        padding: 85px 0;
+
+        @include responsive('tablet-v') {
+            grid-gap: 40px 20px;
+            padding: 50px 0;
+        }
+
+        @include responsive('mobile-h') {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        &__title {
+            flex: auto;
+            p{
+                font-size: 16px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                line-height: 1.8;
+                width: 100%;
+                max-width: 100%;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-bottom: 0;
+
+                @include responsive('mobile-h') {
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+            
+        }
+
+        &__image {
+            position: relative;
+            padding-top: 78.5%;
+            display: block;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__read-more {
+            float: right;
+            font-size: 20px;
+            text-align: right;
+            text-decoration: underline;
+            margin-top: 15px;
+            letter-spacing: 2px;
+
+            @include responsive('mobile-h') {
+                font-size: 18px;
+             }
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        &__text {
+            display: flex;
+            align-items: center;
+            color: #808080;
+            margin-bottom: 10px;
+            font-size: 16px;
+            
+            span {
+                color: #808080;
+                margin: 0 5px;
+            }
+
+            p {
+                color: #808080;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.single-stories {
+
+    &__hero--image {
+        img {
+            width: 100%;
+
+            @include responsive('mobile-h') {
+                height: 300px;
+                object-fit: cover;
+            }
+        }
+    }
+    &__cont {
+        width: 1020px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 80px 0;
+
+        @include responsive('tablet-v') {
+            padding: 40px 0;
+        }
+
+        &--title {
+            font-size: 38px;
+            margin: 0 auto;
+            text-align: center;
+            letter-spacing: 2px;
+            line-height: 60px;
+
+            @include responsive('mobile-h') {
+                font-size: 28px;
+                letter-spacing: 2px;
+                line-height: 40px;
+            }
+        }
+
+        &--block {
+            padding: 80px 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 70px;
+
+            @include responsive('tablet-v') {
+                padding: 40px 0;
+                gap: 20px;
+            }
+
+            @include responsive('mobile-h') {
+                display: block;
+            }
+        }
+
+        &--image {
+            width: 100%;
+
+            @include responsive('mobile-h') {
+                margin-bottom: 20px;
+            }
+
+            img {
+                height: 742px;
+                object-fit: cover;
+
+                @include responsive('mobile-h') {
+                   height: auto;
+                }
+            }
+        }
+        
+        &--text {
+            width: 100%;
+
+            p {
+                color: #3C3C3C;
+                line-height: 36px;
+                font-size: 20px;
+                letter-spacing: 2px;
+
+                @include responsive('mobile-h') {
+                   font-size: 16px;
+                   letter-spacing: 1.2px;
+                }
+            }
+        }
+    }
+}

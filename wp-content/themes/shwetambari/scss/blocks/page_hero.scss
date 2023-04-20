@@ -1,0 +1,41 @@
+.page__hero {
+    @include row();
+    position: relative;
+  
+    &__image {
+      @include row();
+      position: relative;
+      padding-top: 40%;
+  
+      @include responsive('mobile-v') {
+        display: none;
+      }
+  
+      &--responsive {
+        display: none;
+  
+        @include responsive('mobile-v') {
+          display: block;
+          height: 100vh;
+        }
+      }
+    }
+  
+    &__text-cont {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      padding: 0 30px;
+      text-align: center;
+      transform: translate3d(0,-50%,0);
+    }
+  
+    &__title {
+      font-size: 22px;
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+  }
+  

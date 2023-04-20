@@ -1,0 +1,70 @@
+.contact-blocks {
+  padding: 110px 0;
+   text-align: center;
+
+   &__logo {
+     margin-bottom: 90px;
+   }
+
+   &__title {
+     @include row();
+     @extend .h2;
+     text-transform: uppercase;
+     margin-bottom: 90px;
+     letter-spacing: 3px;
+     font-weight: 500;
+
+   }
+
+   &__text {
+     @include row();
+
+     p {
+       font-size: 16px;
+       line-height: 2.1;
+       letter-spacing: 1px;
+       text-transform: uppercase;
+       margin-bottom: 45px;
+       font-weight: 500;
+
+       a {
+         &:hover {
+          text-decoration: underline;
+          color: $primary-color;
+         }
+       }
+     }
+   }
+
+   .socials {
+     display: flex;
+     width: 100%;
+     align-items: center;
+     justify-content: center;
+
+     a {
+       width: 30px;
+       height: 30px;
+       margin: 0 7.5px;
+       background-size: contain;
+       background-position: center center;
+       background-repeat: no-repeat;
+
+       &.facebook {
+         background-image: url(images/facebook.png);
+       }
+
+       &.instagram {
+        background-image: url(images/instagram.png);
+      }
+
+      &.pinterest {
+        background-image: url(images/pinterest.png);
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+     }
+   }
+}

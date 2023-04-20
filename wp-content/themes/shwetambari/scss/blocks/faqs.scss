@@ -1,0 +1,71 @@
+.faqs {
+    padding: 60px 0;
+}
+
+.faqs__text__cont {
+    @include row();
+    text-align: left;
+    margin-bottom: 20px;
+    &--faqs {
+     color: #000;
+     font-size: 20px;
+     background-color: $white;
+     cursor: pointer;
+     padding: 18px;
+     width: 100%;
+     text-align: left;
+     transition: 0.4s;
+     //cursor: pointer;
+     letter-spacing: 4px;
+     text-transform: uppercase;
+     //border: 1px solid #ccc;
+ 
+     @include responsive('mobile-v') {
+      padding: 10px;
+      font-size: 18px;
+     }
+ 
+     /*
+     &.active, &:hover {
+       background-color: #ccc; 
+     }
+     */
+ 
+     i {
+       display: none;
+       /*
+       float: right;
+       font-size: 12px;
+       padding: 6px 0;
+       */
+     }
+ 
+      /*
+      &.open {
+       i {
+         &::before {
+           content: "\f068";
+         }
+       }
+      }
+      */
+    }
+ 
+    .panel {
+     padding: 0 18px;
+     display: block;
+     background-color: $white;
+     overflow: hidden;
+ 
+     @include responsive('mobile-v') {
+       padding: 10px;
+       font-size: 18px;
+      }
+       p {
+         color: #808080;
+         font-size: 16px;
+         margin-top: 10px;
+       }
+     }
+ 
+  }

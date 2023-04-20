@@ -1,0 +1,237 @@
+.site-footer {
+  @include row();
+  //margin-top: 87px;
+  background: $primary-color;
+  padding: 100px 0;
+
+  @include responsive('mobile-v') {
+     margin-top: 0;
+  }
+
+  .container {
+    width: 1260px;
+  }
+
+  &__logo {
+    @include row();
+    text-align: center;
+    
+
+    img {
+      max-width: 100%;
+      filter: invert(1);
+    }
+  }
+
+  &__bottom {
+    @include row();
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+
+    @include responsive('tablet-h') {
+      display: block;
+   }
+
+    p {
+      float: left;
+      width: 290px;
+      @extend .h5;
+      color: $white;
+      margin-bottom: 0;
+      text-align: right;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 14px;
+      white-space: nowrap;
+      @include responsive('tablet-h') {
+        width: 100%;
+        text-align: center;
+     }
+    }
+  }
+
+  .menu-menu-footer-container {
+    float: left;
+    width: calc(100% - 300px);
+
+    @include responsive('tablet-h') {
+      width: 100%;
+   }
+
+    ul {
+      @include row();
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      padding-right: 20px;
+
+      @include responsive('tablet-h') {
+        display: block;
+     }
+
+      li {
+        margin: 0 5px;
+       @include responsive('tablet-h') {
+        text-align: center;
+        margin: 5px 0;
+     }
+        a {
+          float: left;
+          @extend .h5;
+          color: $white;
+          text-transform: uppercase;
+          letter-spacing: 1.4px;
+          font-size: 14px;
+          white-space: nowrap;
+
+          @include responsive('tablet-h') {
+            float: none;
+         }
+        }
+      }
+    }
+  }
+}
+
+.footer__popup--terms, .footer__popup--faqs {
+  display: none;
+  position: fixed;
+  background: white;
+  width: 95%;
+  right: 50%;
+  top: 100px;
+  transform: translate(50%, 0);
+  min-height: 400px;
+  max-height: calc(100vh - 200px);
+  z-index: 20;
+  padding: 60px;
+  box-shadow: 4px 29px 26px 3px rgb(0 0 0 / 30%);
+
+  @include responsive('mobile-v') {
+    width: 100%;
+    top: 0;
+    min-height: 100vh;
+    padding: 30px;
+  }
+
+
+  .close_popup {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 20px;
+    height: 20px;
+    background: url(images/close-grey.svg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @include responsive('mobile-v') {
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  &__text{
+
+    h2 {
+      font-size: 36px;
+      color: #808080;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      font-size: 30px;
+      color: #808080;
+      margin-bottom: 15px;
+    }
+    h4 {
+      font-size: 25px;
+      color: #808080;
+    }
+    p {
+      margin-bottom: 30px;
+      color: #808080;
+    }
+    li{
+      color: #808080;
+      list-style-position: inside;
+    }
+  }
+}
+.footer__popup--terms{
+  overflow-y: scroll;
+  
+}
+
+.footer__popup--faqs {
+
+  .faqs_title {
+    font-size: 30px;
+    color: #808080;
+    margin-bottom: 20px;
+
+    @include responsive('mobile-v') {
+      padding: 0;
+    }
+  }
+
+ .footer__popup__text__cont {
+   @include row();
+   text-align: left;
+
+   &--faqs {
+    color: #808080;
+    font-size: 21px;
+    background-color: $white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    transition: 0.4s;
+    cursor: pointer;
+
+    @include responsive('mobile-v') {
+     padding: 10px;
+     font-size: 18px;
+    }
+
+    &.active, &:hover {
+      background-color: #ccc; 
+    }
+
+    i {
+      float: right;
+      font-size: 12px;
+      padding: 10px 0;
+    }
+
+    &.open {
+      i {
+        &::before {
+          content: "\f068";
+        }
+      }
+    }
+   }
+
+   .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: $white;
+    overflow: hidden;
+
+    @include responsive('mobile-v') {
+      padding: 10px;
+      font-size: 18px;
+     }
+      p {
+        color: #808080;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+    }
+
+ }
+}

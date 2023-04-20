@@ -1,0 +1,10 @@
+.comming-soon {
+  width: 100%;
+  float: left;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  background-attachment: fixed;
+}

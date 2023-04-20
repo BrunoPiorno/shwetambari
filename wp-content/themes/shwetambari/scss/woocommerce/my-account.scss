@@ -1,0 +1,165 @@
+.woocommerce-account {
+    .woocommerce {
+        padding: 60px 0;
+
+
+        #customer_login {
+            h2 {
+                font-size: 35px;
+                color: $secondary-color;
+            }
+        }
+
+            .woocommerce-MyAccount-navigation {
+            background: #fafafb; 
+            margin: 0;
+
+            @include responsive('tablet-v') {
+                margin-bottom: 40px
+            }
+
+            li {
+                @include row();
+                border-top: 1px solid rgba(0, 0, 0, 0.1); 
+                margin-bottom: 0;
+                list-style: none;
+
+                &:nth-child(1) {
+                    border: none;
+                }
+
+                &.is-active a { 
+                    background: $secondary-color; 
+                    color: $white;
+                }
+                a {
+                float: left; 
+                width: 100%; 
+                padding: 15px 10px; 
+                font-size: 16px; 
+                font-weight: 700; 
+                color: #7C7C7C;
+                
+                    &:hover {
+                        background: $secondary-color; 
+                        color: $white;
+                    }
+                }
+
+                &.woocommerce-MyAccount-navigation-link--downloads {
+                    display: none;
+                }
+            }
+        }
+
+        .woocommerce-MyAccount-content {
+            .woocommerce-orders-table {
+                tbody .woocommerce-orders-table__cell a {
+                    color: $secondary-color;
+                    margin: 0 5px;
+
+                    @include responsive('tablet-v') {
+                        margin: 0 2px;
+                        width: auto;
+                    }
+                }
+
+               
+            }
+            p {
+                a {
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        .button.button {
+            height: 30px ;
+            line-height: 30px ;
+            padding: 0 20px;
+            font-size: 13px;
+        }
+
+        .woocommerce-message {
+            .button.button{
+                color: $white;
+                border: 1px solid $white;  
+                cursor: pointer;
+                background: transparent;
+    
+                &:hover {
+                    color: #878485db;
+                    background: $white;
+                }
+            }
+        }
+        
+        .woocommerce-form-login .woocommerce-form-login__rememberme {
+            line-height: 50px;
+
+            @include responsive('mobile-v') {
+                width: 100%;
+            }
+        }
+
+        .woocommerce-Address {
+            address {
+                font-size: 16px;
+            }
+        }
+        
+    }
+    .addresses {
+        .title {
+            .edit {
+                float: left; 
+                clear: left; 
+                margin-top: 10px; 
+                font-size: 16px; 
+                color: $secondary-color;
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+
+            h3 {
+                margin-bottom: 0; 
+                font-size: 18px;
+            }
+        }
+    }
+    .woocommerce-error::before {
+        top: auto;
+    }
+}
+    .woocommerce-Address-title {
+        margin-bottom: 45px;
+    }
+    .woocommerce-EditAccountForm fieldset {
+        border: none; 
+        margin: 0; 
+        padding: 0;
+    }
+
+    .woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+        height: 360px;
+
+        @include responsive('tablet-v') {
+            @include row();
+            height: 400px;
+        }
+
+        @include responsive('mobile-v') {
+            @include row();
+            height: auto;
+        }
+    }
+    
+
+    .woocommerce-lost-password .woocommerce .woocommerce-form-row {@include row();}
+
+    .woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled] {
+        opacity: 1;
+        padding: 0 20px;
+    }
